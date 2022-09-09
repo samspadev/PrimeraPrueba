@@ -92,6 +92,7 @@ public class E14 {
 		System.out.println("El ganador en hombres es el dorsal " + dorsalH + " con un tiempo de "+mejorTiempoH+ " minutos" 
 		+ "\nLa ganadora en mujeres es el dorsal " + dorsalM +" con un tiempo de "+mejorTiempoM+" minutos");
 
+		System.out.println("Cambios con GIT");
 	}
 
 }
