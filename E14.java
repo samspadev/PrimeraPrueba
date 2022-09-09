@@ -15,6 +15,40 @@ public class E14 {
 		int dorsalH=0;
 		int dorsalM=0;
 		
+		listado=guardarArray(listado);
+		
+		
+	
+	
+		System.out.println("Dorsal\tSexo\tEdad\tMinutos");
+		for (int i=0;i<filas;i++) {
+			for(int j=0;j<columnas;j++) {
+				System.out.print(listado[i][j] + "\t");
+				if (listado[i][j]==0) { //hombre
+					provisionalH=listado[i][j+2];
+					if(provisionalH < mejorTiempoH) {
+						mejorTiempoH=provisionalH;
+						dorsalH=listado[i][j-1];
+					}
+				
+				}
+				if (listado[i][j]==1) { //mujer
+					provisionalM=listado[i][j+2];
+					if(provisionalM < mejorTiempoM) {
+						mejorTiempoM=provisionalM;
+						dorsalM=listado[i][j-1];
+					}
+				
+				}
+			}
+			System.out.print("\n");
+		}
+		System.out.println("El ganador en hombres es el dorsal " + dorsalH + " con un tiempo de "+mejorTiempoH+ " minutos" 
+		+ "\nLa ganadora en mujeres es el dorsal " + dorsalM +" con un tiempo de "+mejorTiempoM+" minutos");
+
+		System.out.println("Cambios con GIT");
+	}
+	public static int [][] guardarArray(int [][] listado) {
 		listado[0][0]=3457;
 		listado[0][1]=1;
 		listado[0][2]=51;
@@ -64,35 +98,8 @@ public class E14 {
 		listado[9][1]=0;
 		listado[9][2]=57;
 		listado[9][3]=48;
-	
-	
-		System.out.println("Dorsal\tSexo\tEdad\tMinutos");
-		for (int i=0;i<filas;i++) {
-			for(int j=0;j<columnas;j++) {
-				System.out.print(listado[i][j] + "\t");
-				if (listado[i][j]==0) { //hombre
-					provisionalH=listado[i][j+2];
-					if(provisionalH < mejorTiempoH) {
-						mejorTiempoH=provisionalH;
-						dorsalH=listado[i][j-1];
-					}
-				
-				}
-				if (listado[i][j]==1) { //mujer
-					provisionalM=listado[i][j+2];
-					if(provisionalM < mejorTiempoM) {
-						mejorTiempoM=provisionalM;
-						dorsalM=listado[i][j-1];
-					}
-				
-				}
-			}
-			System.out.print("\n");
-		}
-		System.out.println("El ganador en hombres es el dorsal " + dorsalH + " con un tiempo de "+mejorTiempoH+ " minutos" 
-		+ "\nLa ganadora en mujeres es el dorsal " + dorsalM +" con un tiempo de "+mejorTiempoM+" minutos");
-
-		System.out.println("Cambios con GIT");
+		
+		return listado;
 	}
 
 }
