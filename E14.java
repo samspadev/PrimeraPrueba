@@ -1,9 +1,9 @@
 package e14;
 /*
- * Ejercicio 14 de ProgramaciÛn M03B1 del aÒo 2019/2020 del IOC
+ * Ejercicio 14 de Programaci√≥n M03B1 del a√±o 2019/2020 del IOC
  */
 public class E14 {
-
+	//Programa que introduce unos datos en un array. Se usa un m√©todo para introducir los datos
 	public static void main(String[] args) {
 		int filas=10;
 		int columnas=4;
@@ -14,6 +14,7 @@ public class E14 {
 		int provisionalM;
 		int dorsalH=0;
 		int dorsalM=0;
+		
 		
 		listado=guardarArray(listado);
 		
